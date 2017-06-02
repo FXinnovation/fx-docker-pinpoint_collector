@@ -1,4 +1,4 @@
 [template]
 src  = "pinpoint-collector.properties.tmpl"
-dest = "/usr/local/tomcat/webbapps/ROOT/WEB-INF/classes/pinpoint-collector.properties"
+dest = "/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/pinpoint-collector.properties"
 keys = []

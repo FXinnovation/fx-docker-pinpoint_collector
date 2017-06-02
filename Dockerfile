@@ -3,7 +3,7 @@ FROM tomcat:8.5.15-jre8-alpine
 ENV PINPOINTCOLLECTOR_VERSION=1.6.1 \
     SUEXEC_VERSION=0.2-r0 \
     CONFD_VERSION=0.11.0 \
-    HBBASE_CLIENT_HOST=localhost \
+    HBASE_CLIENT_HOST=localhost \
     HBASE_CLIENT_PORT=2181 \
     HBASE_ZOOKEEPER_ZNODE_PARENT="/hbase" \
     HBASE_IPC_CLIENT_TCPNODEDELAY="true" \
@@ -56,6 +56,8 @@ ADD ./resources /resources
 
 RUN /resources/build && rm -rf resources
 
+ENTRYPOINT ["entrypoint.sh"]
+
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="pinpoint-collector" \
       "org.label-schema.base-image.name"="docker.io/library/tomcat" \
@@ -73,4 +75,4 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.vcs-ref"=$VCS_REF \
       "org.label-schema.version"=$VERSION \
       "org.label-schema.build-date"=$BUILD_DATE \
-      "org.label-schema.usage"=""
+      "org.label-schema.usage"="https://bitbucket.org/fxadmin/public-common-docker-pinpoint_collector"
