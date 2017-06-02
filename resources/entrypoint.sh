@@ -5,4 +5,4 @@ set -e -x
 confd -onetime -backend env
 
 # Running tomcat
-su-exec tomcat ${CATALINA_HOME}/catalina.sh run
+su-exec tomcat ${CATALINA_HOME}/bin/catalina.sh run
