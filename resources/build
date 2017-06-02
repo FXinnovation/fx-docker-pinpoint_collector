@@ -29,3 +29,5 @@ cp /resources/confd/conf.d/* /etc/confd/conf.d/
 # Adding entrypoint
 mv /resources/entrypoint.sh /usr/local/bin/entrypoint.sh
 apk del --purge curl unzip
+# Changing ownership on tomcat folder
+chown -R tomcat:tomcat /usr/local/tomcat
