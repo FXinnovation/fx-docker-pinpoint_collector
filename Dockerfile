@@ -70,7 +70,6 @@ LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.schema-version"="1.0.0-rc.1" \
       "org.label-schema.applications.java.version"=$JAVA_VERSION \
       "org.label-schema.applications.tomcat.version"=$TOMCAT_VERSION \
-      "org.label-schema.applications.su-exec.version"=$SUEXEC_VERSION \
       "org.label-schema.applications.confd.version"=$CONFD_VERSION \
       "org.label-schema.applications.pinpoint-collector.version"=$PINPOINTCOLLECTOR_VERSION \
       "org.label-schema.vcs-ref"=$VCS_REF \
