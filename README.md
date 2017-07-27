@@ -9,7 +9,12 @@ We do not follow the pinpoint-collector release tags in the docker image tags. Y
 
 ## Usage
 ```
-docker run --rm -it -e [KEY]=[VALUE] fxinnovation/pinpoint-collector:[TAG]
+docker run --rm -it \
+  -e [KEY]=[VALUE] \
+  -p 9994:9994 \
+  -p 9995:9995 \
+  -p 9996:9996 \
+  fxinnovation/pinpoint-collector:[TAG]
 ```
 Here is the list of keys you can set:
 
