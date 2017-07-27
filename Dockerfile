@@ -1,7 +1,6 @@
 FROM tomcat:8.5.15-jre8-alpine 
 
-ENV PINPOINTCOLLECTOR_VERSION=1.6.1 \
-    SUEXEC_VERSION=0.2-r0 \
+ENV PINPOINTCOLLECTOR_VERSION=1.6.2 \
     CONFD_VERSION=0.11.0 \
     HBASE_CLIENT_HOST=localhost \
     HBASE_CLIENT_PORT=2181 \
@@ -57,6 +56,8 @@ ADD ./resources /resources
 RUN /resources/build && rm -rf resources
 
 ENTRYPOINT ["entrypoint.sh"]
+
+USER tomcat
 
 LABEL "maintainer"="cloudsquad@fxinnovation.com" \
       "org.label-schema.name"="pinpoint-collector" \
