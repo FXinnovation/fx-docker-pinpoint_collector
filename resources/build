@@ -44,3 +44,6 @@ apk del --purge curl unzip
 # Changing ownership on tomcat folder
 chown -R tomcat:tomcat /usr/local/tomcat
 chown -R tomcat:tomcat /etc/confd
+
+# Redirect stat.log to stdout
+ln -s /dev/stdout /usr/local/tomcat/logs/stat.log
